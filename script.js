@@ -439,38 +439,27 @@ function openFinale() {
 }
 
 function revealMessage() {
-    const cinematicSection = document.getElementById("cinematicSection");
-    const video = document.getElementById("birthdayVideo");
-    const music = window.birthdayMusic;
+    const birthdayMessage = document.getElementById("birthdayMessage");
 
-    if (music) {
-        video.addEventListener("play", () => {
-            music.pause();
-        });
-
-        video.addEventListener("ended", () => {
-            music.play().catch(error => {
-                console.log("Music playback:", error);
-            });
-        });
-
-        video.addEventListener("pause", () => {
-            if (!video.ended) {
-                music.play().catch(error => {
-                    console.log("Music playback:", error);
-                });
-            }
-        });
+    if (!birthdayMessage) {
+        console.log("Birthday message not found");
+        return;
     }
 
+    birthdayMessage.style.display = "block";
+
     setTimeout(() => {
+        const cinematicSection =
+            document.getElementById("cinematicSection");
+
+        cinematicSection.style.display = "block";
+
         cinematicSection.scrollIntoView({
             behavior: "smooth",
             block: "center"
         });
     }, 10000);
 }
-
 const startBtn = document.getElementById("startBtn");
 
 if (startBtn) {
