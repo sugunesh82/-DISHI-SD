@@ -439,39 +439,39 @@ function openFinale() {
 }
 
 function revealMessage() {
-const cinematicSection = document.getElementById("cinematicSection");
-const video = document.getElementById("birthdayVideo");
-const music = window.birthdayMusic;
+    const cinematicSection = document.getElementById("cinematicSection");
+    const video = document.getElementById("birthdayVideo");
+    const music = window.birthdayMusic;
 
-if (music) {
-
-    video.addEventListener("play", () => {
-        music.pause();
-    });
-
-    video.addEventListener("ended", () => {
-        music.play().catch(error => {
-            console.log("Music playback:", error);
+    if (music) {
+        video.addEventListener("play", () => {
+            music.pause();
         });
-    });
 
-    video.addEventListener("pause", () => {
-        if (!video.ended) {
+        video.addEventListener("ended", () => {
             music.play().catch(error => {
                 console.log("Music playback:", error);
             });
-        }
-    });
+        });
+
+        video.addEventListener("pause", () => {
+            if (!video.ended) {
+                music.play().catch(error => {
+                    console.log("Music playback:", error);
+                });
+            }
+        });
+    }
+
+    setTimeout(() => {
+        cinematicSection.scrollIntoView({
+            behavior: "smooth",
+            block: "center"
+        });
+    }, 10000);
 }
 
-setTimeout(() => {
-    cinematicSection.scrollIntoView({
-        behavior: "smooth",
-        block: "center"
-    });
-}, 10000);
-
-}
+const startBtn = document.getElementById("startBtn");
 
 if (startBtn) {
     startBtn.addEventListener("click", () => {
@@ -487,5 +487,6 @@ if (startBtn) {
 
         openPortal();
     });
+}
 }
 
