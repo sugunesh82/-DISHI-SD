@@ -488,5 +488,3 @@ if (startBtn) {
         openPortal();
     });
 }
-}
-
