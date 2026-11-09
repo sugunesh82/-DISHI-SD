@@ -410,7 +410,7 @@ function openFinale() {
             </p>
             <h1>✨🧡💜✨</h1>
             </div>
-            <div id="cinematicSection" style="display:none; margin-top:40px; max-width:600px;">
+            <div id="cinematicSection" style="display:none; margin-top:40px; max-width:600px; position:relative; z-index:10; pointer-events:auto;">
 
     <h2 style="color:#ff9b59;">
         🎬 A Little Movie For You
@@ -421,8 +421,11 @@ function openFinale() {
         Every memory has a meaning.
     </p>
 
-   <video id="birthdayVideo" controls playsinline preload="auto"
-    style="width:100%; max-width:600px; height:auto; border-radius:18px; background:#000;">
+   <video id="birthdayVideo"
+    controls
+    playsinline
+    preload="metadata"
+    style="display:block; width:100%; height:auto; min-height:250px; position:relative; z-index:11; pointer-events:auto; border-radius:18px; background:#000;">
     <source src="https://sugunesh82.github.io/-DISHI-SD/birthday.mp4" type="video/mp4">
     Your browser does not support video.
 </video>
