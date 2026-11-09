@@ -441,16 +441,15 @@ function openFinale() {
 function revealMessage() {
     const birthdayMessage = document.getElementById("birthdayMessage");
 
-    if (!birthdayMessage) {
-        console.log("Birthday message not found");
-        return;
-    }
+    if (!birthdayMessage) return;
 
     birthdayMessage.style.display = "block";
 
     setTimeout(() => {
         const cinematicSection =
             document.getElementById("cinematicSection");
+
+        if (!cinematicSection) return;
 
         cinematicSection.style.display = "block";
 
