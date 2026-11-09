@@ -469,14 +469,6 @@ function revealMessage() {
             }
         });
     }
-
-    setTimeout(() => {
-        cinematicSection.scrollIntoView({
-            behavior: "smooth",
-            block:  "start"
-        });
-    }, 500);
-
 }
 const startBtn = document.getElementById("startBtn");
 
