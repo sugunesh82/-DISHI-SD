@@ -439,28 +439,41 @@ function openFinale() {
 }
 
 function revealMessage() {
+const cinematicSection = document.getElementById("cinematicSection");
+const video = document.getElementById("birthdayVideo");
+const music = window.birthdayMusic;
 
-    const birthdayMessage = document.getElementById("birthdayMessage");
-    const cinematicSection = document.getElementById("cinematicSection");
+if (music) {
 
-    birthdayMessage.style.display = "block";
-    cinematicSection.style.display = "block";
+    video.addEventListener("play", () => {
+        music.pause();
+    });
 
-    const video = document.getElementById("birthdayVideo");
-    const music = window.birthdayMusic;
-
-    if (music) {
-
-        video.addEventListener("play", () => {
-            music.pause();
+    video.addEventListener("ended", () => {
+        music.play().catch(error => {
+            console.log("Music playback:", error);
         });
+    });
 
-        video.addEventListener("ended", () => {
+    video.addEventListener("pause", () => {
+        if (!video.ended) {
             music.play().catch(error => {
                 console.log("Music playback:", error);
             });
-        });
+        }
+    });
+}
 
+setTimeout(() => {
+    cinematicSection.scrollIntoView({
+        behavior: "smooth",
+        block: "center"
+    });
+}, 10000);
+
+}
+
+const startBtn = document.getElementById("startBtn");
         video.addEventListener("pause", () => {
             if (!video.ended) {
                 music.play().catch(error => {
@@ -468,7 +481,12 @@ function revealMessage() {
                 });
             }
         });
-    }
+    setTimeout(() => {
+    cinematicSection.scrollIntoView({
+        behavior: "smooth",
+        block: "center"
+    });
+}, 10000);
 }
 const startBtn = document.getElementById("startBtn");
 
