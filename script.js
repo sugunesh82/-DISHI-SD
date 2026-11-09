@@ -473,23 +473,6 @@ setTimeout(() => {
 
 }
 
-const startBtn = document.getElementById("startBtn");
-        video.addEventListener("pause", () => {
-            if (!video.ended) {
-                music.play().catch(error => {
-                    console.log("Music playback:", error);
-                });
-            }
-        });
-    setTimeout(() => {
-    cinematicSection.scrollIntoView({
-        behavior: "smooth",
-        block: "center"
-    });
-}, 10000);
-}
-const startBtn = document.getElementById("startBtn");
-
 if (startBtn) {
     startBtn.addEventListener("click", () => {
         const music = new Audio("./birthday-music.mp3");
