@@ -207,17 +207,17 @@ function openGallery() {
         <div class="gallery">
 
             <div class="photo-card" onclick="openPhoto('photo1.jpeg')">
-                <img src="/photo1.jpeg" alt="Memory One">
+                <img src="./photo1.jpeg" alt="Memory One">
                 <p>Memory One 🧡</p>
             </div>
 
             <div class="photo-card" onclick="openPhoto('photo2.jpeg')">
-                <img src="/photo2.jpeg" alt="Memory Two">
+                <img src="./photo2.jpeg" alt="Memory Two">
                 <p>Memory Two 💜</p>
             </div>
 
             <div class="photo-card" onclick="openPhoto('photo3.jpeg')">
-                <img src="/photo3.jpeg" alt="Memory Three">
+                <img src="./photo3.jpeg" alt="Memory Three">
                 <p>Memory Three 🦋</p>
             </div>
 
@@ -255,7 +255,7 @@ function openPhoto(src) {
         <span style="color:white;font-size:35px;cursor:pointer;"
         onclick="this.parentElement.remove()">×</span>
 
-        <img src="/${src}"
+        <img src="./${src}"
         style="max-width:90%;max-height:80vh;
         object-fit:contain;border-radius:15px;">
     `;
@@ -265,9 +265,9 @@ function openPhoto(src) {
    function startSlideshow() {
    
 const photos = [
-    "/photo1.jpeg",
-    "/photo2.jpeg",
-    "/photo3.jpeg"
+    "./photo1.jpeg",
+    "./photo2.jpeg",
+    "./photo3.jpeg"
 ];
 
 
