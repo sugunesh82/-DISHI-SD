@@ -421,11 +421,11 @@ function openFinale() {
         Every memory has a meaning.
     </p>
 
-    <video id="birthdayVideo" controls width="100%" style="border-radius:18px;">
-    <source src="/birthday.mp4" type="video/mp4">
+   <video id="birthdayVideo" controls playsinline preload="auto"
+    style="width:100%; max-width:600px; height:auto; border-radius:18px; background:#000;">
+    <source src="https://sugunesh82.github.io/-DISHI-SD/birthday.mp4" type="video/mp4">
     Your browser does not support video.
 </video>
-
     <p style="color:#bd80ff;">
         Made with 🧡 and 💜 for 🦋DISHI🫧
     </p>
