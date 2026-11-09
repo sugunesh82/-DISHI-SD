@@ -1,22 +1,3 @@
-const music = new Audio("./birthday-music.mp3");
-
-music.loop = true;
-music.volume = 0.6;
-
-music.addEventListener("canplaythrough", () => {
-    console.log("Music file loaded!");
-});
-
-music.addEventListener("error", () => {
-    console.log("Music file not found or unsupported!");
-});
-
-window.birthdayMusic = music;
-
-music.play().catch(error => {
-    console.log("Music error:", error);
-});
-
 function openPortal() {
     document.body.innerHTML = `
     <style>
