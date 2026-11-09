@@ -498,7 +498,7 @@ const startBtn = document.getElementById("startBtn");
 
 if (startBtn) {
     startBtn.addEventListener("click", () => {
-const music = new Audio("./birthday-music.mp3");
+        const music = new Audio("./assets/birthday-music.mp3");
 
         music.loop = true;
         music.volume = 0.6;
@@ -511,3 +511,4 @@ const music = new Audio("./birthday-music.mp3");
         openPortal();
     });
 }
+
