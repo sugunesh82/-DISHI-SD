@@ -437,9 +437,6 @@ function openFinale() {
     </div>
     `;
 }
-    </div>
-    `;
-
     // Video and background music control
     const video = document.getElementById("birthdayVideo");
     const music = window.birthdayMusic;
