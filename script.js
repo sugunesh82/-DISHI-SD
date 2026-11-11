@@ -437,6 +437,31 @@ function openFinale() {
     </div>
     `;
 }
+    </div>
+    `;
+
+    // Video and background music control
+    const video = document.getElementById("birthdayVideo");
+    const music = window.birthdayMusic;
+
+    if (video && music) {
+
+        video.onplay = () => {
+            music.pause();
+        };
+
+        video.onpause = () => {
+            if (!video.ended) {
+                music.play().catch(() => {});
+            }
+        };
+
+        video.onended = () => {
+            music.play().catch(() => {});
+        };
+
+    }
+}
 
 function revealMessage() {
     const birthdayMessage = document.getElementById("birthdayMessage");
